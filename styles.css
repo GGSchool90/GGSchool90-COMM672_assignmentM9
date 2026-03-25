@@ -1,0 +1,218 @@
+/* HIDE CHECKBOX */
+#menu-toggle {
+    display: none;
+}   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* NAV DESKTOP */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    position: relative;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* BUTTON */
+.button {
+    background: #e6a563;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+}
+
+/* ICONS HIDDEN DESKTOP */
+.menu-icon,
+.close-icon {
+    display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+   #menu-toggle:checked ~ nav {
+    right: 0;
+}
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 20px 0;
+    }
+
+    nav li a {
+        font-size: 24px;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    /* DROPDOWN FIX FOR MOBILE */
+    .dropdown-menu {
+        display: block;
+        position: static;
+        box-shadow: none;
+        background: none;
+        padding: 0;
+    }
+}
+/* HIDE CHECKBOX */
+#menu-toggle {
+  display: none;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    #menu-toggle:checked ~ nav {
+        right: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+}
+
+/* OPEN MENU */
+#menu-toggle:checked ~ nav {
+  right: 0;
+}
+
+/* MENU ICON */
+.menu-icon img {
+  width: 30px;
+  cursor: pointer;
+}
+
+/* CLOSE ICON */
+.close-icon {
+  display: block;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.close-icon img {
+  width: 25px;
+  cursor: pointer;
+}
+
+/* NAV LINKS */
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+  nav {
+    position: static;
+    height: auto;
+    width: auto;
+    background: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu-icon,
+  .close-icon {
+    display: none;
+  }
+}

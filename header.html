@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purrfect Vibes - Header</title>
+
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+
+        <a href="index.html">
+            <img src="images/logo.png" alt="logo">
+        </a>
+
+        <!-- ✅ CHECKBOX (KEY PART) -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <img src="images/menu.svg" alt="menu">
+        </label>
+
+        <nav>
+
+            <!-- CLOSE ICON -->
+            <label for="menu-toggle" class="close-icon">
+                <img src="images/x.svg" alt="close">
+            </label>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+
+                <li class="dropdown">
+                    <a href="features.html">Features</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Cat Care</a></li>
+                        <li><a href="#">Quizzes</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html" class="button">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+</header>
+
+</body>
+</html>
